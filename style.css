@@ -1,0 +1,327 @@
+@font-face{
+    font-family: 'horizon';
+    src: url('font/Horizon.otf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: #212121;  
+}
+
+header{
+    margin: auto;
+    height:30vh;
+    background-color: #fff;
+    background-image: url(imagens/bg-basquete.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    background-attachment:fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.logo{  
+    display: flex;
+    margin-left:20px;
+    align-items:center;
+}
+.logo>h1{
+    font-family:'Horizon';
+    color: #fff;
+    text-align: justify;
+    font-size:clamp(1.75em, 1em + 3vw, 3em);
+    width:300px;
+    margin: 15px;
+}
+header>.logo>img{
+    width:15vh;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.411);
+}
+nav{
+    display:flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    
+}
+nav>a{
+    padding:10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+main .conteudo{
+    padding:40px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    
+}
+.imagem>img{
+    width: 20vw;
+    filter: grayscale(100%);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
+}
+.imagem>img:hover{
+    transition-duration: 0.8s;
+    filter: grayscale(0%);
+}
+.texto{
+    width:40vw;
+    color: #fff;
+    padding: 20px;
+    
+}
+.texto>h1{
+    font-size:3em;
+    margin:auto;
+    letter-spacing: 0.5px;
+}
+.texto>p{
+    font-size: 0.9rem;
+    margin: auto;
+    font-weight: lighter;
+    letter-spacing: 1px;
+
+}
+.texto>input{
+    padding: 10px 30px;
+    margin: 20px auto;
+    background-color:#62ABD9;
+    border: none;
+    display:block;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
+    
+}
+.meio{
+    margin-top: 10vh;
+    padding: 5vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fff;
+    background-image: url(imagens/quadra.jpg);
+}
+.imagem-meio:hover{
+    transition-duration: 0.8s;
+    border-radius: 5px;
+    background:#ff914d;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
+    
+}
+.info-meio{
+    width:25vw;
+}
+.imagem-meio>img{
+    width: 25vw;
+    filter: grayscale(100%);
+}
+.imagem-meio>img:hover{
+    transition-duration: 0.8s;
+    filter: saturate(120%);
+}
+.info-meio>h2{
+    margin: auto;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.info-meio>p{
+    width:100%;
+    text-align: center;
+    margin: auto;
+}
+.info-meio>input{
+    padding: 10px 30px;
+    margin: 20px auto;
+    background-color:#62ABD9;
+    border: none;
+    display:block;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+main .formulario{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content:center;
+    align-items: center;   
+}
+.formulario{
+    margin:auto;
+    min-width: 700px;
+    width:60%;
+    background:#212121;
+    padding:25px 30px;
+    color: #62ABD9;
+}
+::placeholder{
+    color: #62ABD9;
+}
+form{
+    background: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
+}
+.formulario .titulo{
+    font-size:25px;
+    font-weight: bold;
+    position:relative;
+    color: #fff;
+    padding-bottom:20px;
+}
+.formulario .titulo::before{
+    content: "";
+    left: 0;
+    bottom:0;
+    position: absolute;
+    height:3px;
+    width:30px;
+    background:linear-gradient(135deg, #ff914d, #62ABD9);
+    margin-bottom: 20px;
+}
+.formulario form .usuario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin:20px 0 12px 0;
+}
+form .usuario .caixa-input{
+    margin-bottom:15px;
+    width: calc(100% / 2 - 20px);
+}
+.usuario .caixa-input .detalhes {
+    display:block;
+    font-weight:bold;
+    margin-bottom: 5px;
+}
+.usuario .caixa-input input{
+    height:45px;
+    width:100%;
+    outline: none;
+    border-radius:5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+}
+.usuario .caixa-input input:focus,
+.usuario .caixa-input input:valid{
+    border-color:#ff914d;
+}
+form .genero-detalhes .genero-titulo{
+    font-size:20px;
+    font-weight: bold;
+}
+form .genero-detalhes .categoria{
+    width:80%;
+    margin: 14px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.genero-detalhes .categoria label{
+    display: flex;
+    align-items: center;
+
+}
+.genero-detalhes .categoria .ponto{
+    height:18px;
+    width:18px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+#ponto-1:checked ~ .categoria .um,
+#ponto-2:checked ~ .categoria .dois,
+#ponto-3:checked ~ .categoria .tres{
+    border-color: #d9d9d9;
+    background-color: #ff914d;
+}
+form input[type="radio"]{
+    display:none;
+}
+form .botao{
+    height:45px;
+    margin: 45px 0;
+}
+form .botao input{
+    height:100%;
+    width:100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size:18px;
+    font-weight: bold;
+    border-radius: 5px;
+    letter-spacing:1px;
+    background:linear-gradient(135deg, #ff914d, #62ABD9);
+}
+form .botao input:hover{
+    background:linear-gradient(-135deg, #ff914d, #62ABD9);
+    cursor:pointer;
+}
+@media screen and (min-width:480px) and (max-width:800px) {
+    .texto>h1{
+        width: 40vw;
+        font-size: 2rem;
+    }
+    .imagem>img{
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width:900px){
+    .info-meio>h2{
+        font-size:1.2em;
+    }
+    .info-meio>p{
+        font-size:0.7em;
+    }
+}
+
+
+@media (max-width:584px){
+    .formulario{
+        max-width: 100%;
+    }
+    form .usuario .caixa-input{
+        margin-bottom:15px;
+        width:100%;
+    }
+    form .genero-detalhes .categoria{
+        width:100%;
+        
+    }
+    .formulario form .usuario{
+        max-height: 300px;
+        overflow-y:scroll;
+    }
+    .usuario::-webkit-scrollbar{
+        width:0;
+    }
+}
