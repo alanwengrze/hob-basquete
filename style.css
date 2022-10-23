@@ -8,6 +8,7 @@
     box-sizing: border-box;
 }
 body{
+    overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
     width: 100vw;
     height: 100vh;
@@ -17,6 +18,7 @@ body{
 header{
     margin: auto;
     height:30vh;
+    width: 100vw;
     background-color: #fff;
     background-image: url(imagens/bg-basquete.jpg);
     background-repeat: no-repeat;
@@ -37,8 +39,8 @@ header{
     font-family:'Horizon';
     color: #fff;
     text-align: justify;
-    font-size:clamp(1.75em, 1em + 3vw, 3em);
-    width:300px;
+    font-size:clamp(1.75em, 1em + 3vw, 2.5em);
+    width:200px;
     margin: 15px;
 }
 header>.logo>img{
@@ -48,7 +50,6 @@ header>.logo>img{
 nav{
     display:flex;
     justify-content: flex-end;
-    padding-right: 20px;
     
 }
 nav>a{
@@ -57,7 +58,7 @@ nav>a{
     color: #fff;
     border-radius: 10px;
     margin: 10px;
-    font-size: 1.2rem;
+    font-size:clamp(1.75em, 1em + 3vw, 0.8.5em);
 }
 
 main .conteudo{
@@ -67,10 +68,11 @@ main .conteudo{
     justify-content: space-evenly;
     align-items: center;
     width: 100vw;
+    height: 100vh;
     
 }
 .imagem>img{
-    width: 20vw;
+    width: 30vw;
     filter: grayscale(100%);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
 }
@@ -81,23 +83,25 @@ main .conteudo{
 .texto{
     width:40vw;
     color: #fff;
-    padding: 20px;
+    padding: 20px 0px;
     
 }
 .texto>h1{
     font-size:3em;
     margin:auto;
     letter-spacing: 0.5px;
+    text-align: center;
 }
 .texto>p{
     font-size: 0.9rem;
     margin: auto;
     font-weight: lighter;
     letter-spacing: 1px;
+    text-align: center;
 
 }
 .texto>input{
-    padding: 10px 30px;
+    padding:10px;
     margin: 20px auto;
     background-color:#62ABD9;
     border: none;
@@ -111,6 +115,7 @@ main .conteudo{
     
 }
 .meio{
+    height: 100vh;
     margin-top: 10vh;
     padding: 5vh;
     display:flex;
@@ -119,6 +124,10 @@ main .conteudo{
     align-items: center;
     color: #fff;
     background-image: url(imagens/quadra.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    background-attachment:fixed;
 }
 .imagem-meio:hover{
     transition-duration: 0.8s;
@@ -129,6 +138,10 @@ main .conteudo{
 }
 .info-meio{
     width:25vw;
+}
+.imagem-meio{
+    display: flex;
+    flex-direction: column;
 }
 .imagem-meio>img{
     width: 25vw;
@@ -171,7 +184,7 @@ main .formulario{
 }
 .formulario{
     margin:auto;
-    min-width: 700px;
+    min-width: 500px;
     width:60%;
     background:#212121;
     padding:25px 30px;
@@ -285,13 +298,17 @@ form .botao input:hover{
     background:linear-gradient(-135deg, #ff914d, #62ABD9);
     cursor:pointer;
 }
-@media screen and (min-width:480px) and (max-width:800px) {
+@media screen and (min-width:480px) and (max-width:900px) {
     .texto>h1{
         width: 40vw;
         font-size: 2rem;
     }
     .imagem>img{
         width: 40vw;
+    }
+    header{
+        display:flex;
+        flex-direction: column;
     }
 }
 
@@ -302,13 +319,53 @@ form .botao input:hover{
     .info-meio>p{
         font-size:0.7em;
     }
+    header, main .conteudo{
+        display:flex;
+        flex-direction: column;
+        
+    }
+  
+
 }
 
 
 @media (max-width:584px){
-    .formulario{
-        max-width: 100%;
+
+    .imagem>img{
+        width: 60vw;
     }
+    .texto>h1{
+        font-size: 1.5em;
+    }
+    .texto>p{
+        font-size:1em;
+    }
+
+    .meio{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+    .imagem-meio{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        gap: 5em;
+        align-items: center;
+    }
+    .imagem-meio>img{
+        width: 30vw;
+    }
+    .imagem-meio:hover{
+        background: fixed;
+        box-shadow: none;
+    }
+
+    .formulario{
+        min-width: 400px;
+    }
+
     form .usuario .caixa-input{
         margin-bottom:15px;
         width:100%;
@@ -324,4 +381,10 @@ form .botao input:hover{
     .usuario::-webkit-scrollbar{
         width:0;
     }
+   .categoria{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+   }
+
 }
