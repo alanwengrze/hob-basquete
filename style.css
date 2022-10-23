@@ -164,9 +164,9 @@ main .conteudo{
 .info-meio>input{
     padding: 10px 30px;
     margin: 20px auto;
+    display:block;
     background-color:#62ABD9;
     border: none;
-    display:block;
     border-radius: 5px;
     color: #fff;
     font-size: 1rem;
@@ -336,9 +336,16 @@ form .botao input:hover{
     }
     .texto>h1{
         font-size: 1.5em;
+        width: 100%;
     }
     .texto>p{
-        font-size:1em;
+        font-weight: 100;
+        font-size:0.8em;
+        width: 100%;
+        color: rgba(255, 255, 255, 0.829);
+    }
+    .texto{
+        width: 100%;
     }
 
     .meio{
@@ -347,6 +354,18 @@ form .botao input:hover{
         justify-content: space-around;
         gap: 2em;
         
+    }
+    .info-meio{
+        width:30vw;
+        height:100%;
+    }
+    .info-meio:hover{
+        background:#ff914d;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
+    }
+    .info-meio>input{
+        padding: 10px 0px;
+        width: 100%;
     }
     .imagem-meio{
         display: flex;
